@@ -1,7 +1,7 @@
 # laya/cocos图集神器
 
 ### python环境
-(利用python2.7处理图像 PS: 以mac为例, windows教程网络自取)
+ps: 安装python2.7图像库 (本教程以mac为例)
 
 1 安装pip步骤
 
