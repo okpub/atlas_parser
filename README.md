@@ -15,7 +15,7 @@ sudo pip install pillow
 sudo pip install image
 ```
 
-3 终端测试,如果无报错则成功
+3 终端测试(无报错则成功)
 
 ```vim
 python
