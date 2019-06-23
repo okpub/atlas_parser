@@ -1,9 +1,8 @@
 # laya/cocos图集神器
 
-### python环境
-ps: 安装python2.7图像库 (本教程以mac为例)
+### 安装python2.7图像库配置 (本教程以mac为例)
 
-1 安装pip步骤
+1 安装pip
 
 ```vim
 brew install pip
