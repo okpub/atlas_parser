@@ -18,17 +18,16 @@ def argv(n):
         return sys.argv[n]
     return None
 
-## 建立目录
-def mkdirs(path):
+## 递归建立目录
+def mkdir(path):
     if not os.path.exists(path):
-        os.mkdir(path)    #os.makedirs(path) #递归建立目录
+        os.makedirs(path)   #os.mkdir(path)
 
 ## 保存图片
 def save_img(img, name, prefix):
-    #path="./"+prefix+name
     # mkdir (去掉空格和最后的\)
-    mkdirs(prefix.strip().rstrip("\\"))
-    # save img
+    mkdir(prefix.strip().rstrip("\\"))
+    # save 保存路径为py执行的路径
     img.save(prefix+name,'PNG')
 
 ## 从原始图片裁剪
