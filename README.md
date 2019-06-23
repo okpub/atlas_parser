@@ -8,7 +8,7 @@
 brew install pip
 ```
 
-2 安装pip后还需要导入图像处理模块
+2 安装图像处理模块
 
 ```vim
 sudo pip install pillow
