@@ -21,3 +21,19 @@ sudo pip install image
 python
 from PIL import Image
 ```
+
+# 使用make.py将图集还原
+1 默认本目录所有图集
+```vim
+python make.py
+```
+
+2 指定单独文件(*.atlas | *.json | *.plist)
+```vim
+python make.py test.atlas
+```
+
+3 指定路径
+```vim
+python make.py path
+```
