@@ -1,4 +1,4 @@
-# laya/cocos图集神器
+# atlas图集还原神器
 
 ### 安装python2.7图像库配置 (本教程以mac为例)
 
