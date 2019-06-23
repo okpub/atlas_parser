@@ -3,11 +3,15 @@
 注意python2.7需要安装pip
 (PS: 以mac为例, windows教程网络自取)
 
-`brew install pip`
+```vim
+brew install pip
+```
 
 安装pip后还需要导入2个模块用来处理图像
 
-`sudo pip install pillow`
+```vim
+sudo pip install pillow
+```
 
 #图像处理模块
 
