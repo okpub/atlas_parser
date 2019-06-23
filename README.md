@@ -1,23 +1,21 @@
 # detach_atlas
 
-注意python2.7需要安装pip
-(PS: 以mac为例, windows教程网络自取)
+(利用python2.7处理图像 PS: 以mac为例, windows教程网络自取)
+
+1, 安装pip步骤
 
 ```vim
 brew install pip
 ```
 
-安装pip后还需要导入2个模块用来处理图像
+2, 安装pip后还需要导入图像处理模块
 
 ```vim
 sudo pip install pillow
+sudo pip install image
 ```
 
-#图像处理模块
-
-`sudo pip install image`
-
-终端运行,如果无报错则成功
+3, 终端测试,如果无报错则成功
 
 ```vim
 python
