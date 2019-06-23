@@ -15,7 +15,6 @@
 
 终端运行,如果无报错则成功
 
-`python
-
-from PIL import Image
+`>python
+>from PIL import Image
 `
