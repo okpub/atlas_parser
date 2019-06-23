@@ -23,13 +23,15 @@ python
 from PIL import Image
 ```
 
-### 使用make.py将图集还原
-1 默认本目录所有图集
+### 使用make.py还原图集
+ps：有效文件后缀(*.atlas | *.json | *.plist)
+
+1 默认本目录
 ```vim
 python make.py
 ```
 
-2 指定单独文件(*.atlas | *.json | *.plist)
+2 指定文件
 ```vim
 python make.py test.atlas
 ```
