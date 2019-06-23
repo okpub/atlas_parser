@@ -1,5 +1,6 @@
-# detach_atlas
+# laya/cocos图集神器
 
+## python环境
 (利用python2.7处理图像 PS: 以mac为例, windows教程网络自取)
 
 1, 安装pip步骤
@@ -22,7 +23,7 @@ python
 from PIL import Image
 ```
 
-# 使用make.py将图集还原
+## 使用make.py将图集还原
 1 默认本目录所有图集
 ```vim
 python make.py
