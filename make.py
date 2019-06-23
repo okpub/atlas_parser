@@ -7,22 +7,26 @@ import os
 import re
 from PIL import Image
 
+root_dir="."
+
+def dirof(name):
+    return root_dir+"/"+name
 
 ## 获取系统参数
 def argv(n):
     if len(sys.argv)>n:
         return sys.argv[n]
-    return 0
+    return None
 
-## 递归建立目录
+## 建立目录
 def mkdirs(path):
     if not os.path.exists(path):
-        os.makedirs(path)    #os.mkdir(dir)
+        os.mkdir(path)    #os.makedirs(path) #递归建立目录
 
 ## 保存图片
 def save_img(img, name, prefix):
     #path="./"+prefix+name
-    # mkdir
+    # mkdir (去掉空格和最后的\)
     mkdirs(prefix.strip().rstrip("\\"))
     # save img
     img.save(prefix+name,'PNG')
@@ -41,7 +45,7 @@ def item_handle(img, name, item, meta):
 
 def atlas_dump(data):
     meta=data["meta"]
-    img=Image.open(meta["image"])
+    img=Image.open(dirof(meta["image"])) #获取目录的图片
     for name in data["frames"]:
         item_handle(img, name, data["frames"][name], meta)
 
@@ -51,9 +55,8 @@ legal_types=r'.+(.atlas|.json|.plist)$'
 
 ## 读取某个atlas文件
 def load(path):
-    #file=os.path.splitext(path)
+    #file=os.path.splitext(file)
     #filename,type=file #print(" file suffix: "+type, " file name: "+filename)
-    #只有符合规则的文件才能读取
     if re.match(legal_types, path, re.I):
         print("load file: "+path)
         with open(path, "r") as txt:
@@ -72,11 +75,17 @@ def load_dir(path):
         if os.path.isdir(file): #忽略子目录的文件
             print("#####ERROR: child file not parsing ["+file+"]")
         else:
-            load(file)
+            load(dirof(file))
 
 # main   load("createUI.atlas") #可以读取某个atlas/json文件
 if __name__=='__main__':
-    if os.path.isdir(argv(1)):
-        load_dir(argv(1))   #指定目录(输出为本目录)
+    path=argv(1)
+    if not path:
+        load_dir(root_dir)       #默认路径
     else:
-        load_dir(".")       #本目录
+        if os.path.isdir(path):
+            root_dir=path
+            load_dir(path)  #指定目录(输出为本目录)
+        else:
+            root_dir=os.path.dirname(path)
+            load(path)      #指定文件
