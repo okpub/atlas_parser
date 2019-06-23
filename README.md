@@ -19,7 +19,7 @@ sudo pip install pillow
 
 终端运行,如果无报错则成功
 
-```python
+```vim
 python
 from PIL import Image
 ```
