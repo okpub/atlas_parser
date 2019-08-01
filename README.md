@@ -22,7 +22,7 @@ python
 from PIL import Image
 ```
 
-### 使用make.py还原图集
+### 使用make.py（打开mac终端）
 ps：有效文件后缀(*.atlas | *.json | *.plist)
 
 1 默认本目录
